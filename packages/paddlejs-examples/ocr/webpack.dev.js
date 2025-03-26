@@ -18,8 +18,10 @@ module.exports = {
         })
     ],
     resolve: {
-        // Add ".ts" and ".tsx" as resolvable extensions.
-        extensions: ['.ts', '.js']
+        extensions: ['.ts', '.js'],
+        fallback: {
+            "fs": false
+        }
     },
     module: {
         rules: [
@@ -33,8 +35,5 @@ module.exports = {
     output: {
         filename: '[name].js',
         path: path.resolve(__dirname, 'dist')
-    },
-    node: {
-        fs: 'empty'
     }
 };
