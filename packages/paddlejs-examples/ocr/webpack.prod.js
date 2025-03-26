@@ -30,7 +30,7 @@ module.exports = {
     },
     output: {
         filename: '[name].js',
-        path: path.resolve(__dirname, 'dist'),
+        path: path.resolve(__dirname, 'public'),  // 改为 public
         libraryTarget: 'umd'
     }
     // 删除这里的 node 配置
