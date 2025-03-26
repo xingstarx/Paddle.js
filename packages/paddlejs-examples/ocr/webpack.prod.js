@@ -14,7 +14,6 @@ module.exports = {
         })
     ],
     resolve: {
-        // Add ".ts" and ".tsx" as resolvable extensions.
         extensions: ['.ts', '.js'],
         fallback: {
             "fs": false
@@ -33,8 +32,9 @@ module.exports = {
         filename: '[name].js',
         path: path.resolve(__dirname, 'dist'),
         libraryTarget: 'umd'
-    },
-    node: {
-        fs: 'empty'
     }
+    // 删除这里的 node 配置
+    // node: {
+    //     fs: 'empty'
+    // }
 };
